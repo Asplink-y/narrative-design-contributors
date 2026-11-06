@@ -1,0 +1,40 @@
+{
+  "title": "harbour master - first meeting",
+  "nodes": [
+    {
+      "id": "greeting",
+      "type": "greeting",
+      "is_exit": true,
+      "options": [
+        {"text": "Hello.", "kind": "statement", "leads_to": "hub"}
+      ]
+    },
+    {
+      "id": "hub",
+      "type": "hub",
+      "options": [
+        {"text": "Where are you from?", "kind": "question", "leads_to": "origin", "stance": "good"},
+        {"text": "I think you are lying.", "kind": "statement", "leads_to": "accuse", "stance": "neutral"},
+        {"text": "Leave.", "kind": "statement", "is_exit": true, "stance": "evil"}
+      ]
+    },
+    {
+      "id": "origin",
+      "type": "hub",
+      "options": [
+        {"text": "What happened forty years ago?", "kind": "question", "leads_to": "hub", "stance": "good"},
+        {"text": "That sounds unlikely.", "kind": "statement", "leads_to": "hub", "stance": "neutral"},
+        {"text": "Forget it.", "kind": "statement", "is_exit": true, "stance": "evil"}
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "type": "red",
+      "node": "accuse",
+      "failure_advances": false,
+      "reflection_option": false,
+      "retryable": true
+    }
+  ]
+}

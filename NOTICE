@@ -1,0 +1,52 @@
+Narrative Design Workbench
+Copyright 2026 narrative-design contributors
+
+THIRD-PARTY SOURCES AND ATTRIBUTION
+==================================
+
+This project is an independent, method-level distillation of the following talk:
+
+  Title:      "How to build (un)believable worlds?"
+  Speaker:    Helen Hindpere (writer, Disco Elysium; lead writer, The Final Cut)
+  Event:      Konsoll 2023, Day 2, 13:00-14:00
+  Reference:  https://discoelysium.wiki.gg/wiki/Further_Elysium_Media
+
+  Bilibili upload used for cross-checking:
+  https://www.bilibili.com/video/BV1vo4h6UEqq
+  Uploader: 日珥蜡Ria
+  The Chinese subtitles and the Chinese-translated slide deck published in that
+  upload were produced manually by the uploader.
+
+WHAT IS AND IS NOT INCLUDED
+===========================
+
+Included:
+  - Original, rewritten descriptions of methods, principles and design patterns.
+  - Factual identifiers and technical terms (proper nouns, pattern names).
+  - Our own examples, checklists, templates and code.
+
+Not included (deliberately):
+  - No verbatim transcript or subtitle lines.
+  - No translated slide wording reproduced verbatim.
+  - No slides, screenshots, images or video/audio assets from the talk.
+
+All explanatory prose in this repository was written from scratch. Proper
+nouns are used only to identify concepts and works; they remain the property
+of their respective holders. The talk and its slides remain the property of
+Helen Hindpere / Konsoll 2023. The Chinese translation remains the work of the
+Bilibili uploader.
+
+If you wish to redistribute the translated slides, subtitles, or any other
+source material, obtain permission from the respective rights holders first.
+This repository grants no rights over those materials.
+
+The skill package is distributed under the MIT License (see LICENSE). That
+license covers only the original prose and code in this repository.
+
+DISTILLATION NOTE
+=================
+
+Oral content was derived from an English audio transcription and cross-checked
+against the published slide deck. Proper nouns were corrected against the
+slides. Slide text takes precedence where the two disagree. Minor wording
+differences may remain in paraphrased material; see references/qa-insights.md.

@@ -1,0 +1,65 @@
+{
+  "skill": "narrative-design",
+  "version": "1.0.0",
+  "notes": "Run each prompt in a fresh session, once with the skill enabled and once disabled. Trigger and behaviour are separate measurements.",
+  "evals": [
+    {
+      "id": "trigger-setting-zh",
+      "prompt": "我们在做一个俯视角侦探 RPG，世界观文档只有两页，帮我看看够不够可信。",
+      "should_trigger": true,
+      "expected_behaviour": [
+        "classifies the world as project-specific and cites W-1",
+        "cites W-3 and W-4 as the main gaps",
+        "produces concrete unused setting details rather than generic advice",
+        "ends with a ticked setting checklist"
+      ]
+    },
+    {
+      "id": "trigger-dialogue-en",
+      "prompt": "Review this branching dialogue: every hub offers three options in the order agree / neutral / refuse, and a failed skill check does nothing.",
+      "should_trigger": true,
+      "expected_behaviour": [
+        "cites A-1, A-5 and P-9",
+        "provides replacement option lines and a return path",
+        "distinguishes red from white checks",
+        "outputs the three-part contract: diagnosis, rewrite, checklist"
+      ]
+    },
+    {
+      "id": "trigger-applicability",
+      "prompt": "我的第一人称游戏有完整动作捕捉，这套叙事设计规则还适用吗？",
+      "should_trigger": true,
+      "expected_behaviour": [
+        "loads qa-insights.md and cites D-1",
+        "states the single-work / text-heavy bias instead of claiming universality",
+        "mentions the speaker's own regrets about cutscenes and negative outcomes"
+      ]
+    },
+    {
+      "id": "no-trigger-linear-fiction",
+      "prompt": "我在写一部线性长篇小说，帮我润色第三章两人吵架的对话节奏。",
+      "should_trigger": false,
+      "expected_behaviour": [
+        "does not apply hub, check or reactivity rules to linear prose"
+      ]
+    },
+    {
+      "id": "no-trigger-level-tuning",
+      "prompt": "帮我调整这个关卡的敌人血量和掉落概率曲线。",
+      "should_trigger": false,
+      "expected_behaviour": [
+        "does not load narrative design references for numerical balancing"
+      ]
+    },
+    {
+      "id": "behaviour-no-theory-dump",
+      "prompt": "这是我写的一段分支对话，帮我看看哪里不对：[附上对话树 JSON]",
+      "should_trigger": true,
+      "expected_behaviour": [
+        "does not answer with a general essay about narrative design",
+        "cites rule IDs with evidence from the supplied artefact",
+        "marks unavailable checklist items as not checked"
+      ]
+    }
+  ]
+}
